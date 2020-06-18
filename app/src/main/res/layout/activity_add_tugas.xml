@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddTugasActivity">
+
+    <LinearLayout
+        android:layout_marginTop="50dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="Tambah Tugas"
+            android:textSize="25dp"
+            android:textAlignment="center"
+            android:fontFamily="@font/comfortaa"
+            android:textFontWeight="900"
+            android:textColor="@color/colorCustom1"/>
+
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:spinnerMode="dropdown" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtLayoutDeskripsiTugas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Deskripsi tugas"
+            app:hintTextColor="#333"
+            app:boxStrokeColor="#333"
+            android:textColorHint="#333"
+            app:boxBackgroundColor="#333"
+            android:outlineSpotShadowColor="#333"
+            android:layout_marginBottom="20dp"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtDeskripsiTugas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintTextColor="#333"
+                app:boxStrokeColor="#333"
+                android:textColorHint="#333"
+                android:textColor="#333"
+                android:inputType="textMultiLine"
+                />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:weightSum="100">
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="50"/>
+        <Button
+            android:id="@+id/btnSumbit"
+            android:layout_width="0dp"
+            android:layout_weight="50"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="Submit!"
+            android:textSize="15dp"
+            android:layout_alignParentRight="true"
+            android:textColor="#fff"
+            android:background="@drawable/button_bacground"
+            style="@style/TextAppearance.AppCompat.Button"
+            />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/gradient_banner">
+
+    <ImageButton
+        android:id="@+id/closeBtn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_close_black_30dp"
+        android:textAlignment="viewEnd"
+        android:layout_alignParentRight="true"
+        android:paddingTop="15dp"
+        android:layout_marginRight="10dp"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+
+        />
+
+    <LinearLayout
+        android:layout_marginTop="150dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sign in!"
+            android:textSize="40dp"
+            android:textAlignment="center"
+            android:fontFamily="@font/montserrat"
+            android:textFontWeight="400"
+            android:textColor="#fff"/>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="80dp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtLayoutUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/username"
+            app:hintTextColor="#fff"
+            app:boxStrokeColor="#fff"
+            android:textColorHint="#fff"
+            app:boxBackgroundColor="#fff"
+            android:outlineSpotShadowColor="#fff"
+            android:layout_marginBottom="20dp"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintTextColor="#fff"
+                app:boxStrokeColor="#fff"
+                android:textColorHint="#fff"
+                android:textColor="#fff"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtLayoutPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/pass"
+            app:hintTextColor="#fff"
+            app:boxStrokeColor="#fff"
+            android:textColorHint="#fff"
+            app:boxBackgroundColor="#fff"
+            android:outlineSpotShadowColor="#fff"
+            android:layout_marginBottom="20dp"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                app:boxStrokeColor="#fff"
+                android:textColorHint="#fff"
+                android:textColor="#fff"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Login"
+                android:textSize="15dp"
+                android:fontFamily="@font/montserrat"
+                android:layout_alignParentRight="true"
+                android:textColor="#fff"
+                android:textFontWeight="500"
+                android:background="@drawable/button_bacground"
+                style="@style/TextAppearance.AppCompat.Button"
+                />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+
+</RelativeLayout>

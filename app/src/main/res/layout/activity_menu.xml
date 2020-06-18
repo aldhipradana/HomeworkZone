@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MenuActivity">
+
+    <RelativeLayout
+        android:id="@+id/topContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:src="@drawable/background_rounded"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Menu"
+            android:textColor="#fff"
+            android:fontFamily="cursive"
+            android:textSize="50dp"
+            android:textFontWeight="900"
+            android:textAlignment="center"
+            android:layout_marginTop="100dp"
+            />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/menuContainer"
+        android:layout_below="@+id/topContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="15dp"
+        >
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/exitContainer"
+        android:layout_below="@+id/menuContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:gravity="bottom"
+        android:weightSum="100"
+        >
+        <Button
+            android:id="@+id/btnProfile"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="45"
+            android:padding="10dp"
+            android:text="Profile"
+            android:textColor="#ffffff"
+            android:textSize="20dp"
+            android:fontFamily="cursive"
+            android:textFontWeight="700"
+            android:textAllCaps="false"
+            android:background="@drawable/button_press"
+            />
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="10"/>
+        <Button
+            android:id="@+id/btnExit"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="45"
+            android:padding="10dp"
+            android:text="Logout &amp; Exit"
+            android:textColor="#ffffff"
+            android:textSize="20dp"
+            android:fontFamily="cursive"
+            android:textFontWeight="700"
+            android:textAllCaps="false"
+            android:background="@drawable/button_press"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>
