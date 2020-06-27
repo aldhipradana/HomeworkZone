@@ -12,7 +12,7 @@
         android:layout_height="wrap_content">
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="220dp"
+            android:layout_height="320dp"
             android:src="@drawable/background_rounded"
             />
         <TextView
@@ -20,9 +20,9 @@
             android:layout_height="wrap_content"
             android:text="Menu"
             android:textColor="#fff"
-            android:fontFamily="cursive"
-            android:textSize="50dp"
-            android:textFontWeight="900"
+            android:fontFamily="@font/montserrat"
+            android:textSize="45dp"
+            android:textFontWeight="500"
             android:textAlignment="center"
             android:layout_marginTop="100dp"
             />
@@ -36,8 +36,118 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="15dp"
+        android:layout_marginTop="-90dp"
         >
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardMatkul"
+                android:layout_width="0dp"
+                android:layout_weight="50"
+                app:cardUseCompatPadding="true"
+                app:cardCornerRadius="@dimen/cardview_default_radius"
+                app:cardElevation="@dimen/cardview_default_elevation"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:foreground="?attr/selectableItemBackground"
+                android:clickable="true"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:padding="15dp"
+                    >
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:background="@drawable/circle_background_1"
+                        android:src="@drawable/ic_collections_bookmark_black_24dp"
+                        android:padding="13dp"
+                        />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@drawable/circle_background_1"
+                        android:layout_marginTop="15dp"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Matakuliah"
+                        android:fontFamily="@font/comfortaa"
+                        android:textColor="#000"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="10dp"
+                        />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardTugas"
+                android:layout_width="0dp"
+                android:layout_weight="50"
+                app:cardUseCompatPadding="true"
+                app:cardCornerRadius="@dimen/cardview_default_radius"
+                app:cardElevation="@dimen/cardview_default_elevation"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:foreground="?attr/selectableItemBackground"
+                android:clickable="true"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:padding="15dp"
+                    >
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:background="@drawable/circle_background_1"
+                        android:src="@drawable/ic_library_books_black_24dp"
+                        android:padding="13dp"
+                        />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@drawable/circle_background_1"
+                        android:layout_marginTop="15dp"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tugas"
+                        android:fontFamily="@font/comfortaa"
+                        android:textColor="#000"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="10dp"
+                        />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
 
 
     </LinearLayout>
@@ -46,9 +156,10 @@
         android:id="@+id/exitContainer"
         android:layout_below="@+id/menuContainer"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="10dp"
+        android:paddingBottom="0dp"
+        android:layout_alignParentBottom="true"
         android:gravity="bottom"
         android:weightSum="100"
         >
@@ -56,33 +167,36 @@
             android:id="@+id/btnProfile"
             android:layout_width="0dp"
             android:layout_height="50dp"
-            android:layout_weight="45"
+            android:layout_weight="50"
             android:padding="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
             android:text="Profile"
-            android:textColor="#ffffff"
-            android:textSize="20dp"
-            android:fontFamily="cursive"
+            android:textColor="@color/colorCustom1"
+            android:textSize="15dp"
+            android:fontFamily="@font/comfortaa"
             android:textFontWeight="700"
             android:textAllCaps="false"
-            android:background="@drawable/button_press"
+            android:background="@drawable/button_bg_white_rounded"
             />
-        <Space
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="10"/>
+
         <Button
             android:id="@+id/btnExit"
             android:layout_width="0dp"
             android:layout_height="50dp"
-            android:layout_weight="45"
+            android:layout_weight="50"
             android:padding="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
             android:text="Logout &amp; Exit"
-            android:textColor="#ffffff"
-            android:textSize="20dp"
-            android:fontFamily="cursive"
+            android:textColor="@color/colorCustom1"
+            android:textSize="15dp"
+            android:fontFamily="@font/comfortaa"
             android:textFontWeight="700"
             android:textAllCaps="false"
-            android:background="@drawable/button_press"
+            android:background="@drawable/button_bg_white_rounded"
             />
 
     </LinearLayout>

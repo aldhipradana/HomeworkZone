@@ -18,7 +18,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="30dp"
             android:text="Tambah Matakuliah"
             android:textSize="25dp"
             android:textAlignment="center"
@@ -55,12 +55,11 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
-
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/txtLayoutSemester"
+            android:id="@+id/txtLayoutNamaDosen"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Semester"
+            android:hint="Nama Dosen"
             app:hintTextColor="#333"
             app:boxStrokeColor="#333"
             android:textColorHint="#333"
@@ -70,7 +69,7 @@
             >
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/txtSemester"
+                android:id="@+id/txtNamaDosen"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:hintTextColor="#333"
@@ -82,6 +81,29 @@
 
 
         </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="15dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Semester : "
+                android:textSize="19dp"
+                android:textColor="#333"
+                android:layout_marginRight="20dp"
+                />
+
+            <Spinner
+                android:id="@+id/spinSemester"
+                android:layout_width="match_parent"
+                android:layout_height="27dp"
+
+                />
+        </LinearLayout>
 
 
         <com.google.android.material.textfield.TextInputLayout
@@ -116,26 +138,26 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="bottom"
-        android:weightSum="100">
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:weightSum="100"
+        android:layout_alignParentBottom="true"
+        >
 
-        <Space
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="50"/>
         <Button
             android:id="@+id/btnSumbit"
             android:layout_width="0dp"
-            android:layout_weight="50"
+            android:layout_weight="40"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:text="Submit!"
+            android:layout_margin="10dp"
+            android:text="Submit"
             android:textSize="15dp"
+            android:textFontWeight="500"
+            android:fontFamily="@font/comfortaa"
             android:layout_alignParentRight="true"
-            android:textColor="#fff"
-            android:background="@drawable/button_bacground"
-            style="@style/TextAppearance.AppCompat.Button"
+            android:textAllCaps="false"
+            android:textColor="@color/colorCustom1"
+            android:background="@drawable/button_bg_white_rounded"
             />
     </LinearLayout>
 

@@ -9,10 +9,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AddTugasActivity"></activity>
-        <activity android:name=".AddMatakuliahActivity" />
-        <activity android:name=".TugasActivity" />
-        <activity android:name=".MatakuliahActivity" />
+        <activity android:name=".EditTugasActivity"></activity>
+        <activity android:name=".DetailTugasActivity" />
+        <activity android:name=".EditMatakuliahActivity" />
+        <activity
+            android:name=".ProfileActivity"
+            android:label="Profile Developer" />
+        <activity
+            android:name=".AddTugasActivity"
+            android:label="Tugas" />
+        <activity
+            android:name=".AddMatakuliahActivity"
+            android:label="Mata Kuliah" />
+        <activity
+            android:name=".TugasActivity"
+            android:label="Tugas" />
+        <activity
+            android:name=".MatakuliahActivity"
+            android:label="Mata Kuliah" />
         <activity
             android:name=".MenuActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />

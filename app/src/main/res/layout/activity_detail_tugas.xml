@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddTugasActivity">
+    tools:context=".DetailTugasActivity">
+
 
     <LinearLayout
         android:layout_marginTop="50dp"
@@ -19,7 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
-            android:text="Tambah Tugas"
+            android:text="Detail Tugas"
             android:textSize="25dp"
             android:textAlignment="center"
             android:fontFamily="@font/comfortaa"
@@ -27,11 +28,33 @@
             android:textColor="@color/colorCustom1"/>
 
 
-        <Spinner
-            android:id="@+id/spinner"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtLayoutMataKuliah"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:spinnerMode="dropdown" />
+            android:layout_height="wrap_content"
+            android:hint="Mata Kuliah"
+            app:hintTextColor="#333"
+            app:boxStrokeColor="#333"
+            android:textColorHint="#333"
+            app:boxBackgroundColor="#333"
+            android:outlineSpotShadowColor="#333"
+            android:layout_marginBottom="20dp"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtMataKuliah"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintTextColor="#333"
+                app:boxStrokeColor="#333"
+                android:textColorHint="#333"
+                android:textColor="#333"
+                android:inputType="textMultiLine"
+                android:enabled="false"
+                />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/txtLayoutDeskripsiTugas"
@@ -55,62 +78,43 @@
                 android:textColorHint="#333"
                 android:textColor="#333"
                 android:inputType="textMultiLine"
+                android:enabled="false"
+
                 />
 
 
         </com.google.android.material.textfield.TextInputLayout>
 
-        <LinearLayout
-            android:id="@+id/dateWrap"
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtLayoutTanggalTugas"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="100"
-            android:orientation="horizontal"
+            android:hint="Batas Waktu tugas"
+            app:hintTextColor="#333"
+            app:boxStrokeColor="#333"
+            android:textColorHint="#333"
+            app:boxBackgroundColor="#333"
+            android:outlineSpotShadowColor="#333"
+            android:layout_marginBottom="20dp"
             >
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/txtLayoutTanggalTugas"
-                android:layout_width="0dp"
-                android:layout_weight="60"
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtTanggalTugas"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Batas Waktu tugas"
                 app:hintTextColor="#333"
                 app:boxStrokeColor="#333"
                 android:textColorHint="#333"
-                app:boxBackgroundColor="#333"
-                android:outlineSpotShadowColor="#333"
-                android:layout_marginBottom="20dp"
-                >
+                android:textColor="#333"
+                android:inputType="text"
+                android:enabled="false"
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/txtTanggalTugas"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:hintTextColor="#333"
-                    app:boxStrokeColor="#333"
-                    android:textColorHint="#333"
-                    android:textColor="#333"
-                    android:inputType="text"
-                    />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-
-            <Button
-                android:id="@+id/btnDate"
-                android:layout_width="0dp"
-                android:layout_weight="40"
-                android:layout_height="wrap_content"
-                android:text="Select Date"
-                android:textSize="15dp"
-                android:textFontWeight="500"
-                android:fontFamily="@font/comfortaa"
-                android:textAllCaps="false"
-                android:textColor="@color/colorCustom1"
-                android:background="@drawable/button_bg_white_rounded"
                 />
 
-        </LinearLayout>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
 
     </LinearLayout>
 
@@ -123,12 +127,12 @@
         >
 
         <Button
-            android:id="@+id/btnSumbit"
+            android:id="@+id/btnEditTugas"
             android:layout_width="0dp"
             android:layout_weight="40"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:text="Submit"
+            android:text="Edit"
             android:textSize="15dp"
             android:textFontWeight="500"
             android:fontFamily="@font/comfortaa"

@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddTugasActivity">
+    tools:context=".EditTugasActivity">
+
 
     <LinearLayout
         android:layout_marginTop="50dp"
@@ -19,7 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
-            android:text="Tambah Tugas"
+            android:text="Edit Tugas"
             android:textSize="25dp"
             android:textAlignment="center"
             android:fontFamily="@font/comfortaa"
