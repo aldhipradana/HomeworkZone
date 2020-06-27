@@ -96,7 +96,7 @@ public class AddTugasActivity extends AppCompatActivity implements DatePickerDia
         db.execSQL(insertSql);
 
         Toast.makeText( getApplicationContext(), "Sukses Tambah Data Tugas!", Toast.LENGTH_SHORT).show();
-        MatakuliahActivity.ma.RefreshList();
+        TugasActivity.ta.RefreshList();
         finish();
 
     }
